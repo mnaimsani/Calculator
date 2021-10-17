@@ -48,7 +48,7 @@ namespace Calculator
                         expression.RHS.LHS = expression.LHS / expression.RHS.LHS;
                         break;
                     default:
-                        throw new FormatException("Input format invalid");
+                        throw new FormatException("Invalid operator");
                 }
 
                 expression = expression.RHS;

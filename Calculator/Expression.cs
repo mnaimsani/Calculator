@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Calculator
 {
@@ -10,37 +9,6 @@ namespace Calculator
         public string Operator;
         public Expression RHS;
         public int ParentLevel;
-
-        //public Expression(string expressionString, int parentLevel = 1)
-        //{
-        //    ParentLevel = parentLevel;
-            
-        //    var tokenQueue = new Queue<string>(expressionString.Split(" "));
-
-        //    while (tokenQueue.Peek() == "(")
-        //    {
-        //        tokenQueue.Dequeue();
-        //        ParentLevel++;
-        //    }           
-
-        //    LHS = double.Parse(tokenQueue.Dequeue());
-
-        //    var nextParentLevel = ParentLevel;
-
-        //    string test2 = tokenQueue.Peek();
-        //    while (!string.IsNullOrEmpty(test2) && test2 == ")")
-        //    {
-        //        tokenQueue.Dequeue();
-        //        nextParentLevel--;
-        //        tokenQueue.TryPeek(out test2);
-        //    }
-
-        //    if (tokenQueue.Count > 0)
-        //    {
-        //        Operator = tokenQueue.Dequeue();
-        //        RHS = new Expression(string.Join(" ", tokenQueue), nextParentLevel);
-        //    }
-        //}
 
         public Expression(string expressionString, int currentParentLevel = 1)
         {
